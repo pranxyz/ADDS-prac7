@@ -8,7 +8,7 @@ RecursiveBinarySearch::RecursiveBinarySearch()
 
 }
 
-int RecursiveBinarySearch::bSearch(vector<int> &toSearch, int key, int lower, int upper)
+bool RecursiveBinarySearch::search(vector<int> &toSearch, int key, int lower, int upper)
 {
    if( lower > upper )
    {
@@ -19,11 +19,11 @@ int RecursiveBinarySearch::bSearch(vector<int> &toSearch, int key, int lower, in
 
    if( toSearch.at(midpoint) > key )
    {
-       return bSearch(toSearch, key, lower, midpoint - 1);
+       return search(toSearch, key, lower, midpoint - 1);
    }
    else if( toSearch.at(midpoint) < key )
    {
-       return bSearch(toSearch, key, midpoint + 1, upper); 
+       return search(toSearch, key, midpoint + 1, upper);
    }
    else
    {
