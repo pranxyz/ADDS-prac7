@@ -27,7 +27,7 @@ int main()
    myq.sort(inputs, 0, inputs.size() - 1);
 
    RecursiveBinarySearch mybin;
-   int found = mybin.bSearch(inputs, 0, 0, inputs.size() - 1);
+   int found = mybin.search(inputs, 0, 0, inputs.size() - 1);
    if (found >= 0)
    {
        cout << "false";
